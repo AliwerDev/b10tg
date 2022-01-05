@@ -7,21 +7,24 @@ button {
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  border-radius: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #768C9E;
+  border-radius: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #17212B;
+  border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #0E1621;
 }
 
 body {
@@ -34,7 +37,6 @@ body {
 
 header {
   padding: 10px 40px;
-  background: #17212B;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   color: #fff;
 }
@@ -59,7 +61,7 @@ header {
 }
 #addForm .send i {
   color: #3498db;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .main {
