@@ -15,20 +15,20 @@ button{
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
-  border-radius: 5px;
+  width: 5px;
+  border-radius: 2px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: $dark-4;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: $dark-2;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 /* Handle on hover */

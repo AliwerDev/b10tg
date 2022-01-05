@@ -6,20 +6,20 @@ button {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
-  border-radius: 5px;
+  width: 5px;
+  border-radius: 2px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: #768C9E;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #17212B;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 /* Handle on hover */
