@@ -90,7 +90,7 @@ function createList(obj) {
         }
     });
     addForm.children[0].focus();
-    mainSection.scrollTop = mainSection.scrollHeight - mainSection.clientHeight;
+    mainSection.scrollTop = mainSection.scrollHeight - mainSection.clientHeight + addForm.clientHeight;
     // window.scrollTo(0, 800);
 }
 

@@ -10,7 +10,6 @@ body {
 
 header{
   padding: 10px 40px;
-  background: $dark-2;
   box-shadow: $box-shadow;
   color: $light;
 }
@@ -33,7 +32,7 @@ header{
     background: none;
     i{
       color: $blue;
-      font-size: 32px;
+      font-size: 28px;
     }
   }
 }
