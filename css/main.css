@@ -59,7 +59,7 @@ header {
 }
 #addForm .send i {
   color: #3498db;
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .main {
@@ -86,7 +86,8 @@ header {
   color: #768C9E;
 }
 #taskList .message {
-  width: 40%;
+  width: 100%;
+  max-width: 500px;
   padding: 8px 16px;
   border-radius: 5px;
   background-color: #242F3D;
