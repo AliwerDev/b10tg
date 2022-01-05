@@ -1,0 +1,118 @@
+@import "consts";
+
+body {
+  background: $dark-1;
+  height: 100vh !important;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+header{
+  padding: 10px 40px;
+  background: $dark-2;
+  box-shadow: $box-shadow;
+  color: $light;
+}
+
+#addForm{
+  width: 100%;
+  padding: 10px 20px;
+  background: $dark-3;
+  input{
+    background: none;
+    flex: 1;
+    color: $light;
+    border: none;
+    outline: none;
+  }
+  .send{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    i{
+      color: $blue;
+      font-size: 36px;
+    }
+  }
+}
+
+.main{
+  overflow: auto;
+  flex: 1;
+}
+
+#taskList{
+  li{
+    .bttn{
+      color: $dark-4;
+      display: none;
+    }
+    &:hover{
+      .bttn{
+        display: inline-block;
+      }
+    }
+  }
+
+  .info{
+    color: $light;
+    .userName{
+      font-size: 16px;
+      color: $blue;
+    }
+    .data{
+      font-size: 12px;
+      color: $dark-4;
+    }
+  }
+
+  .message{
+    width:40%;
+    padding:8px 16px;
+    border-radius:5px;
+    background-color: $dark-3;
+    margin:10px 0 0 60px;
+    box-shadow: $box-shadow;
+    position: relative;
+
+    &::before{
+      content: "";
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-bottom: 5px solid $dark-3;
+      position: absolute;
+      top: -10px;
+      left: 10px;
+    }
+
+    textarea{
+      background: transparent !important;
+      font-size:18px;
+      color:white;
+      width:100%;
+      height: 100px;
+      resize:none;
+      outline:none;
+    }
+  };
+}
+.userImg{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  margin-right:20px;
+}
+
+//.btn-edit{
+//  color: orange;
+//};
+//
+//.btn-delete{
+//  color: red;
+//}
+//.btn-save{
+//  color: forestgreen;
+//}
