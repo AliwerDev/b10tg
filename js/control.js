@@ -24,6 +24,7 @@ const getData = () => {
 
 const addForm = document.querySelector('#addForm');
 const imgFoot = document.querySelector("#imgfoot");
+const mainSection = document.querySelector(".main");
 imgFoot.src = userData.image;
 
 addForm.addEventListener('submit', (e) => {
@@ -89,7 +90,8 @@ function createList(obj) {
         }
     });
     addForm.children[0].focus();
-    window.scrollTo(0, 800);
+    mainSection.scrollTop = mainSection.scrollHeight - mainSection.clientHeight;
+    // window.scrollTo(0, 800);
 }
 
 window.removeTask = removeTask;
