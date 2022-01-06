@@ -129,7 +129,7 @@ header {
 }
 #taskList li.myLi .userImg {
   margin-right: 0 !important;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 #taskList li.myLi .headerLi, #taskList li.myLi .body {
   justify-content: flex-end;
@@ -154,7 +154,7 @@ header {
   order: 1 !important;
 }
 #taskList li.otherLi .userImg {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 #taskList li.otherLi .data {
   text-align: end;
