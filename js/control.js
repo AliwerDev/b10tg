@@ -76,6 +76,8 @@ function createList(obj) {
 
         if(task.user === userData.userName){
             li.classList.add("myLi")
+            img.classList.add("d-none");
+            message.classList.remove("mar");
             const right = getElement("div", {className: "components"}, body);
             const editBtn = getElement("button", {
                 className: "btn-edit bttn",
