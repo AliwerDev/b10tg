@@ -127,13 +127,13 @@ header{
     }
     .message{
       background: $dark-32;
+      margin-right: 20px;
       &.mar{
         margin-right: 60px;
       }
       &::before{
         right: -10px;
-        border-left: 5px solid $dark-3 !important;
-        background: $dark-32 !important;
+        border-left: 5px solid $dark-32 !important;
       }
     }.components{
        order: 1 !important;

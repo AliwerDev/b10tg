@@ -143,14 +143,14 @@ header {
 }
 #taskList li.myLi .message {
   background: #3d495f;
+  margin-right: 20px;
 }
 #taskList li.myLi .message.mar {
   margin-right: 60px;
 }
 #taskList li.myLi .message::before {
   right: -10px;
-  border-left: 5px solid #242F3D !important;
-  background: #3d495f !important;
+  border-left: 5px solid #3d495f !important;
 }
 #taskList li.myLi .components {
   order: 1 !important;
