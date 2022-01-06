@@ -34,6 +34,7 @@ header {
   padding: 10px 40px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   color: #fff;
+  background: #17212B;
 }
 
 #addForm {
@@ -45,6 +46,7 @@ header {
   background: #242F3D;
 }
 #addForm input {
+  padding-left: 20px;
   background: none;
   flex: 1;
   color: #fff;
@@ -63,10 +65,17 @@ header {
 }
 
 .main {
+  background: url("https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/Desktop.png");
+  background-size: cover;
+  backdrop-filter: blur(2px) !important;
   overflow: auto;
   flex: 1;
 }
 
+#taskList li {
+  display: flex;
+  align-items: flex-end;
+}
 #taskList li .bttn {
   color: #768C9E;
   display: none;
@@ -74,15 +83,11 @@ header {
 #taskList li:hover .bttn {
   display: inline-block;
 }
-#taskList .info {
-  color: #fff;
-  margin: 0 20px;
-}
-#taskList .info .userName {
+#taskList .userName {
   font-size: 16px;
   color: #3498db;
 }
-#taskList .info .data {
+#taskList .data {
   font-size: 12px;
   color: #768C9E;
 }
@@ -92,7 +97,6 @@ header {
   padding: 8px 16px;
   border-radius: 5px;
   background-color: #242F3D;
-  margin: 10px 0 0 60px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   position: relative;
 }
@@ -101,9 +105,8 @@ header {
   width: 0;
   height: 0;
   border: 5px solid transparent;
-  border-bottom: 5px solid #242F3D;
   position: absolute;
-  top: -10px;
+  bottom: 10px;
 }
 #taskList .message textarea {
   background: transparent !important;
@@ -114,35 +117,57 @@ header {
   resize: none;
   outline: none;
 }
+#taskList li.myLi {
+  justify-content: flex-end;
+}
+#taskList li.myLi .userName {
+  color: #55efc4 !important;
+  text-align: end;
+}
+#taskList li.myLi .data {
+  text-align: end;
+}
+#taskList li.myLi .userImg {
+  margin-right: 0 !important;
+  margin-left: 20px;
+}
 #taskList li.myLi .headerLi, #taskList li.myLi .body {
   justify-content: flex-end;
 }
-#taskList li.myLi .headerLi img {
+#taskList li.myLi .headerLi {
   order: 2 !important;
 }
-#taskList li.myLi .headerLi .info {
-  text-align: right;
+#taskList li.myLi .body {
   order: 1 !important;
 }
-#taskList li.myLi .body .message {
-  margin: 10px 60px 0 0;
-  order: 2 !important;
+#taskList li.myLi .message.mar {
+  margin-right: 60px;
 }
-#taskList li.myLi .body .message::before {
-  right: 10px;
+#taskList li.myLi .message::before {
+  right: -10px;
+  border-left: 5px solid #242F3D !important;
 }
-#taskList li.myLi .body .components {
+#taskList li.myLi .components {
   order: 1 !important;
+}
+#taskList li.otherLi .userImg {
+  margin-right: 20px;
+}
+#taskList li.otherLi .data {
+  text-align: end;
+}
+#taskList li.otherLi .message.mar {
+  margin-left: 60px;
 }
 #taskList li.otherLi .message::before {
-  left: 10px;
+  left: -10px;
+  border-right: 5px solid #242F3D !important;
 }
 
 .userImg {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-right: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

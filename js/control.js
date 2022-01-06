@@ -39,23 +39,40 @@ showTask(createList);
 
 function createList(obj) {
     const tasks = Object.entries(obj);
-    console.log(tasks);
     taskListUl.innerHTML = "";
-    tasks.map((item ) => {
+    tasks.map((item,index ) => {
         console.log(item)
         let id = item[0];
         let task = item[1];
         const li = getElement("li",{className:"p-2 "}, taskListUl);
-        const head = getElement("div", {className: "headerLi d-flex align-items-center"}, li);
-        const img = getElement("img", {className: "userImg order-1", src: task.img || "https://toppng.com/uploads/preview/male-user-filled-icon-man-icon-115533970576b3erfsss1.png"}, head);
-        const infoUser = getElement("div", {className: "info order-2"}, head)
-        getElement("p", {className: "userName m-0", innerText: task.user || "Unknown User"}, infoUser)
-        getElement("p", {className: "data m-0", innerText: task.date || "yoq"}, infoUser);
 
-        const body = getElement("div", {className: "body d-flex align-items-end w-100"}, li);
+        const left = getElement("div", {className: "headerLi d-flex align-items-center"}, li);
+        const img = getElement("img", {
+            className: "userImg order-1",
+            src: task.img || "https://toppng.com/uploads/preview/male-user-filled-icon-man-icon-115533970576b3erfsss1.png"
+        }, left);
+        const body = getElement("div", {className: "body d-flex align-items-end"}, li)
 
-        const message = getElement("div", {className: "message order-1" || "yoq"}, body);
+        const message = getElement("div", {className: "message order-1"}, li);
+
+        const getUserName = getElement("p", {className: "userName m-0", innerText: task.user || "Unknown User"}, message)
+
         const textArea = getElement("textarea",{className:"border-0 order-2",value:task.text,readOnly:true}, message);
+
+        getElement("p", {className: "data m-0", innerText: task.date || "yoq"}, message);
+
+
+        const next = tasks[index + 1] || [];
+        const before = tasks[index - 1] || [];
+
+        if(task.user === before[1]?.user){
+            getUserName.classList.add("d-none")
+        }
+
+        if(task.user === next[1]?.user){
+            img.classList.add("d-none");
+            message.classList.add("mar");
+        }
 
         if(task.user === userData.userName){
             li.classList.add("myLi")
