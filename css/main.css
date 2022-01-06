@@ -12,19 +12,14 @@ button {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #768C9E;
+  background: #17212B;
   border-radius: 2px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #17212B;
+  background: #768C9E;
   border-radius: 2px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #0E1621;
 }
 
 body {
@@ -42,6 +37,9 @@ header {
 }
 
 #addForm {
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
   padding: 10px 20px;
   background: #242F3D;
@@ -78,6 +76,7 @@ header {
 }
 #taskList .info {
   color: #fff;
+  margin: 0 20px;
 }
 #taskList .info .userName {
   font-size: 16px;
@@ -105,7 +104,6 @@ header {
   border-bottom: 5px solid #242F3D;
   position: absolute;
   top: -10px;
-  left: 10px;
 }
 #taskList .message textarea {
   background: transparent !important;
@@ -115,6 +113,29 @@ header {
   height: 100px;
   resize: none;
   outline: none;
+}
+#taskList li.myLi .headerLi, #taskList li.myLi .body {
+  justify-content: flex-end;
+}
+#taskList li.myLi .headerLi img {
+  order: 2 !important;
+}
+#taskList li.myLi .headerLi .info {
+  text-align: right;
+  order: 1 !important;
+}
+#taskList li.myLi .body .message {
+  margin: 10px 60px 0 0;
+  order: 2 !important;
+}
+#taskList li.myLi .body .message::before {
+  right: 10px;
+}
+#taskList li.myLi .body .components {
+  order: 1 !important;
+}
+#taskList li.otherLi .message::before {
+  left: 10px;
 }
 
 .userImg {

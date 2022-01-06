@@ -46,19 +46,20 @@ function createList(obj) {
         let id = item[0];
         let task = item[1];
         const li = getElement("li",{className:"p-2 "}, taskListUl);
-        const head = getElement("div", {className: " d-flex align-items-center"}, li);
-        const img = getElement("img", {className: "userImg", src: task.img || "https://toppng.com/uploads/preview/male-user-filled-icon-man-icon-115533970576b3erfsss1.png"}, head);
-        const infoUser = getElement("div", {className: "info"}, head)
+        const head = getElement("div", {className: "headerLi d-flex align-items-center"}, li);
+        const img = getElement("img", {className: "userImg order-1", src: task.img || "https://toppng.com/uploads/preview/male-user-filled-icon-man-icon-115533970576b3erfsss1.png"}, head);
+        const infoUser = getElement("div", {className: "info order-2"}, head)
         getElement("p", {className: "userName m-0", innerText: task.user || "Unknown User"}, infoUser)
         getElement("p", {className: "data m-0", innerText: task.date || "yoq"}, infoUser);
 
         const body = getElement("div", {className: "body d-flex align-items-end w-100"}, li);
 
-        const message = getElement("div", {className: "message" || "yoq"}, body);
-        const textArea = getElement("textarea",{className:"border-0",value:task.text,readOnly:true}, message);
+        const message = getElement("div", {className: "message order-1" || "yoq"}, body);
+        const textArea = getElement("textarea",{className:"border-0 order-2",value:task.text,readOnly:true}, message);
 
         if(task.user === userData.userName){
-            const right = getElement("div", {}, body);
+            li.classList.add("myLi")
+            const right = getElement("div", {className: "components"}, body);
             const editBtn = getElement("button", {
                 className: "btn-edit bttn",
                 innerHTML: `<i class="fas fa-pencil-alt"></i>`,
@@ -88,6 +89,7 @@ function createList(obj) {
                 }
             }, right)
         }
+        else li.classList.add("otherLi");
     });
     addForm.children[0].focus();
     mainSection.scrollTop = mainSection.scrollHeight - mainSection.clientHeight + addForm.clientHeight;

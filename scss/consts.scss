@@ -21,17 +21,12 @@ button{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $dark-4;
+  background: $dark-2;
   border-radius: 2px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $dark-2;
+  background: $dark-4;
   border-radius: 2px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: $dark-1;
 }

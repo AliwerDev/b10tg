@@ -15,6 +15,9 @@ header{
 }
 
 #addForm{
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
   padding: 10px 20px;
   background: $dark-3;
@@ -57,6 +60,7 @@ header{
 
   .info{
     color: $light;
+    margin: 0 20px;
     .userName{
       font-size: 16px;
       color: $blue;
@@ -85,7 +89,6 @@ header{
       border-bottom: 5px solid $dark-3;
       position: absolute;
       top: -10px;
-      left: 10px;
     }
 
     textarea{
@@ -98,6 +101,41 @@ header{
       outline:none;
     }
   };
+
+  li.myLi{
+    .headerLi, .body{
+      justify-content: flex-end;
+    }
+    .headerLi{
+      img{
+        order: 2 !important;
+      }
+      .info{
+        text-align: right;
+        order: 1!important;
+      }
+    }
+    .body{
+      .message{
+        margin: 10px 60px 0 0;
+        order: 2 !important;
+        &::before{
+          right: 10px;
+        }
+      }
+      .components{
+        order: 1 !important;
+      }
+    }
+  }
+  li.otherLi{
+    .message{
+
+      &::before{
+        left: 10px;
+      }
+    }
+  }
 }
 .userImg{
   width:40px;
