@@ -34,7 +34,7 @@ header {
   padding: 10px 40px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   color: #fff;
-  background: #17212B;
+  background: #3d495f;
 }
 
 #addForm {
@@ -139,6 +139,9 @@ header {
 }
 #taskList li.myLi .body {
   order: 1 !important;
+}
+#taskList li.myLi .message {
+  background: #3d495f;
 }
 #taskList li.myLi .message.mar {
   margin-right: 60px;
