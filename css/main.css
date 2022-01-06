@@ -161,7 +161,7 @@ header {
   text-align: end;
 }
 #taskList li.otherLi .message.mar {
-  margin-left: 60px;
+  margin-left: 50px;
 }
 #taskList li.otherLi .message::before {
   left: -10px;
