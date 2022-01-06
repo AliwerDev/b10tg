@@ -58,7 +58,7 @@ const addTask = (task, form) => {
 
 const showTask = (callback) => {
     onValue(ref(db, 'task_list/'), (data) => {
-        callback(data.val());
+        callback(data.val() || {});
     })
 }
 
